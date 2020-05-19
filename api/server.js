@@ -11,7 +11,7 @@ const oktaJwtVerifier = new OktaJwtVerifier({
   assertClaims: {
     aud: 'api://default',
   }
-});
+}); 
 
 // public route
 server.get('/api/publicInfo', (req, res) => {
