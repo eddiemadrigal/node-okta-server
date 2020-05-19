@@ -21,7 +21,13 @@ server.get('/api/publicInfo', (req, res) => {
 // protected route
 server.get('/api/profile', verifyToken, (req, res) => {
   // res.json(req.jwt); // show token if validated successfully
-  res.status(200).json({ data: 'Authorized users only!' });
+  res.status(200).json({ data: 'Messages: Authorized users only!' });
+});
+
+// protected route
+server.get('/api/messages', verifyToken, (req, res) => {
+  // res.json(req.jwt); // show token if validated successfully
+  res.status(200).json({ data: 'Message: Authorized users only!' });
 });
 
 function verifyToken(req, res, next) {
